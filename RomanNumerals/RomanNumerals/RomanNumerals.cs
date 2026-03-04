@@ -40,7 +40,7 @@ namespace RomanNumerals
                 }
                 return res;
             }
-            return "";
+            return "Number too large for Roman conversion";
         }
     }
 }
