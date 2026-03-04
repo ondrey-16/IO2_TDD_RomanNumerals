@@ -8,6 +8,7 @@ namespace RomanNumerals
         private static readonly Dictionary<int, String> _conversions = new Dictionary<int, String>()
         {
             {5, "V"},
+            {4, "IV"},
             {1, "I"},
         };
         public static String convert(int num)
@@ -15,18 +16,17 @@ namespace RomanNumerals
             if (num <= 8)
             {
                 String res = "";
-                if (num >= 5)
+                while (num > 0)
                 {
-                    res += "V";
-                    num -= 5;
-                }
-                if (num == 4)
-                {
-                    return "IV";
-                }
-                if (num >= 1 && num <= 3)
-                {
-                    res += new String('I', num);
+                    foreach (var conv in _conversions)
+                    {
+                        if (num >= conv.Key)
+                        {
+                            res += conv.Value;
+                            num -= conv.Key;
+                            break;
+                        }
+                    }
                 }
                 return res;
             }
