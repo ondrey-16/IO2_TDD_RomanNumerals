@@ -24,5 +24,10 @@ namespace RomanNumeralsTests
         {
             Assert.Equal("IV", RomanNumerals.RomanNumerals.convert(4));
         }
+        [Fact]
+        public void Test_Convert_5_V()
+        {
+            Assert.Equal("V", RomanNumerals.RomanNumerals.convert(5));
+        }
     }
 }
