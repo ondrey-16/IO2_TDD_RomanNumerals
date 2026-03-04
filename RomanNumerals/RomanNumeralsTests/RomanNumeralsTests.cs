@@ -19,7 +19,7 @@ namespace RomanNumeralsTests
         [InlineData("XL", 40)]
         [InlineData("L", 50)]
         [InlineData("LX", 60)]
-        [InlineData("CD", 900)]
+        [InlineData("XC", 90)]
         [InlineData("C", 100)]
         [InlineData("CCC", 300)]
         [InlineData("CD", 400)]
