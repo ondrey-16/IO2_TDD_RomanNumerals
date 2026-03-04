@@ -4,17 +4,9 @@
     {
         public static String convert(int num)
         {
-            if (num == 1)
+            if (num >= 1 && num <= 3)
             {
-                return "I";
-            }
-            if (num == 2)
-            {
-                return "II";
-            }
-            if (num == 3)
-            {
-                return "III";
+                return new String('I', num);
             }
             return "";
         }
