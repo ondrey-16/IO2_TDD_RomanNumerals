@@ -4,7 +4,11 @@
     {
         public static String convert(int num)
         {
-            throw new NotImplementedException();
+            if (num == 1)
+            {
+                return "I";
+            }
+            return "";
         }
     }
 }
