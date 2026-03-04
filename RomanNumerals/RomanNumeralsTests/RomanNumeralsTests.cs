@@ -32,5 +32,14 @@ namespace RomanNumeralsTests
         {
             Assert.Equal(exp, RomanNumerals.RomanNumerals.convert(num));
         }
+
+        [Theory]
+        [InlineData("CDXXIX", 429)]
+        [InlineData("LXXVII", 77)]
+        [InlineData("MMCCCXLIX", 2349)]
+        public void Test_Convert_MoreComplicated_Numbers(String exp, int num)
+        {
+            Assert.Equal(exp, RomanNumerals.RomanNumerals.convert(num));
+        }
     }
 }
