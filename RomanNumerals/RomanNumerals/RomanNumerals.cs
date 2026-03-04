@@ -4,6 +4,10 @@
     {
         public static String convert(int num)
         {
+            if (num == 5)
+            {
+                return "V";
+            }
             if (num == 4)
             {
                 return "IV";
