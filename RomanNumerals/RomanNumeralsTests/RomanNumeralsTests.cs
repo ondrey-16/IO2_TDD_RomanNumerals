@@ -29,5 +29,13 @@ namespace RomanNumeralsTests
         {
             Assert.Equal("V", RomanNumerals.RomanNumerals.convert(5));
         }
+        [Theory]
+        [InlineData("VI", 6)]
+        [InlineData("VII", 7)]
+        [InlineData("VIII", 8)]
+        public void Test_Convert_6_To_8(String exp, int num)
+        {
+            Assert.Equal(exp, RomanNumerals.RomanNumerals.convert(num));
+        }
     }
 }
