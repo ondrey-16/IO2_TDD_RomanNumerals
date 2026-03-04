@@ -41,5 +41,11 @@ namespace RomanNumeralsTests
         {
             Assert.Equal(exp, RomanNumerals.RomanNumerals.convert(num));
         }
+        [Theory]
+        [InlineData("Number too large for Roman conversion", 50000)]
+        public void Test_Convert_TooLargeNumber(String exp, int num)
+        {
+            Assert.Equal(exp, RomanNumerals.RomanNumerals.convert(num));
+        }
     }
 }
