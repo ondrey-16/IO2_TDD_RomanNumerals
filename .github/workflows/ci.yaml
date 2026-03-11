@@ -1,0 +1,21 @@
+name: RomanNumerals CI
+
+on:
+    push:
+        branches: [main, master]
+
+jobs:
+    build-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+            - uses: actions/setup-dotnet@v4
+              with:
+                dotnet-version: 8.0.x
+            - name: Project Build
+              run: dotnet build
+              working-directory: ./RomanNumerals
+            - name: Start tests
+              run: dotnet test
+              working-directory: ./RomanNumerals
